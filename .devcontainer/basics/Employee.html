@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Employee.css">
+    <title>Employee Management System</title>
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>Employee Database Management</h1>
+            <button id="create_employee">Add Employee</button>
+        </header>
+
+        <div id="employees">
+            <div id="employees_name">
+                <span id="employee_title">Employee List</span>
+                <div id="employee_list"></div>
+            </div>
+
+            <div id="employee_single">
+                <div id="employee_single_title">Employee Information</div>
+                <div id="employee_s
+                ingle_info"></div>
+            </div>
+        </div>
+
+        <div id="addEmployee">
+            <form id="addEmployee_details"> Add Employee Details
+                <input type="text" name="first_name" placeholder="First name" required />
+                <input type="text" name="last_name" placeholder="Last name" required />
+                <input type="text" name="imgURl" placeholder="Image URL (Optional)" />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="number" name="contact_number" placeholder="Contact" required />
+                <input type="number" name="salary" placeholder="Salary" required />
+                <input type="text" name="address" placeholder="Address" required />
+                <input type="date" name="dob" placeholder="Date of Birth" class="employee_dob" required />
+                <input type="submit" class="submit_details" value="Submit">
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
