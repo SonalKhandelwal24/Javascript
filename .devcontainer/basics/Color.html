@@ -1,49 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Changer</title>
     <style>
-        .body{
+        .body {
             margin: 0;
             padding: 0;
         }
-        .container{
+
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 150px;
         }
-        .box{
+
+        .box {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
         }
-        .button{
+
+        .button {
             height: 100px;
             width: 100px;
             border: 1px solid black;
         }
-        #grey{
+
+        #grey {
             background-color: gray;
         }
-        #white{
+
+        #white {
             background-color: white;
         }
-        #blue{
+
+        #blue {
             background-color: blue;
         }
-        #yellow{
+
+        #yellow {
             background-color: yellow;
         }
-        #purple{
+
+        #purple {
             background-color: purple;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Color Scheme Switcher</h1>
@@ -55,16 +65,43 @@
             <div class="button" id="purple"></div>
         </div>
     </div>
-        
+
 </body>
 
 <script>
-    
-let buttons = document.querySelectorAll('.button');
-let body = document.querySelector('body');
-// console.log(buttons);
 
-buttons.forEach(function(button) {
+    let buttons = document.querySelectorAll('.button');
+    let body = document.querySelector('body');
+    // console.log(buttons);
+
+    // buttons.forEach(function (button) {
+    //     console.log(button)
+
+    //     button.addEventListener('click', function (e) {
+    //         console.log(e)
+    //         console.log(e.target)
+    //         switch (e.target.id) {
+    //             case (e.target.id === "grey"):
+    //             body.style.backgroundColor = e.target.id;
+    //             break;
+    //             case (e.target.id === 'white'):
+    //             body.style.backgroundColor = e.target.id;
+    //             break;
+    //             case (e.target.id === 'blue'):
+    //             body.style.backgroundColor = e.target.id;
+    //             break;
+    //             case (e.target.id === 'yellow'):
+    //             body.style.backgroundColor = e.target.id;
+    //             break;
+    //             case (e.target.id === 'purple'):
+    //             body.style.backgroundColor = e.target.id;
+    //             break;
+            
+    //         }
+    //     })
+    // });
+    
+    buttons.forEach(function(button) {
     console.log(button)
     button.addEventListener('click', function(e){
         console.log(e)
@@ -85,7 +122,8 @@ buttons.forEach(function(button) {
             body.style.backgroundColor = e.target.id;
         }
     });
-});
+    });
 
 </script>
+
 </html>
