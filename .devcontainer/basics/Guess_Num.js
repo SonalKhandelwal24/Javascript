@@ -75,6 +75,7 @@ function cleanDisplayGuess(guess){
 function displayMessage(message){
     lowOrHi.innerHTML = `<h2>${message}</h2>`;
 }
+
 //End the game---
 function endGame(){
     userInput.value = '';
@@ -85,8 +86,9 @@ function endGame(){
     playGame = false;
     newGame();
 }
+
+//Start the game
 function newGame(){
-    //Start the game
     let newGameButton = document.querySelector('#newGame')
     newGameButton.addEventListener('click', function(e){
         randomNum = parseInt(Math.random() * 100 + 1);
@@ -96,7 +98,6 @@ function newGame(){
         remaining.innerHTML = `${11 - num_guess}`;
         userInput.removeAttribute('disabled');
         startOver.removeChild(p);
-        
         playGame = true;
     })
 }
