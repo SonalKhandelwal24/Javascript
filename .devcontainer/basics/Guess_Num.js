@@ -87,7 +87,7 @@ function endGame(){
     newGame();
 }
 
-//Start the game
+//Start the game---
 function newGame(){
     let newGameButton = document.querySelector('#newGame')
     newGameButton.addEventListener('click', function(e){
