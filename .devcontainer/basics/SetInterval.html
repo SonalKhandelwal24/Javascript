@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+            padding: 5%;
+        }
+
+        button {
+            margin: 10px 10px 10px 0px;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        #demo {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Set interval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div id="demo"></div>
+</body>
+
+<script>
+    const date = function () {
+        console.log("Sonal", Date.now());
+        const date = new Date();
+        document.getElementById('demo').innerHTML = date.toLocaleTimeString();
+    }
+    let interval;
+    document.querySelector('#start').addEventListener('click', function () {
+        console.log("start");
+        interval = setInterval(date, 1000);
+    });
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(interval);
+        console.log("stop");
+    })
+</script>
+
+</html>
