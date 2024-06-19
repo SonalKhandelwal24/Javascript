@@ -63,7 +63,7 @@ function checkGuess(guess){
     }    
 }
 
-//clean the userInput, and add the guess value in previous guess list and calculate the value of remaining that how many chances are remaining 
+//clean the userInput, and add the guess value in previous guess list and calculate the value of remaining that how many chances are remaining---
 function cleanDisplayGuess(guess){
     userInput.value = '';
     guessValues.innerHTML += `${guess}, `;
