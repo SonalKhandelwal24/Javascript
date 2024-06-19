@@ -91,6 +91,7 @@ function endGame(){
 function newGame(){
     let newGameButton = document.querySelector('#newGame')
     newGameButton.addEventListener('click', function(e){
+
         randomNum = parseInt(Math.random() * 100 + 1);
         preGuessArray = [];
         num_guess = 1
@@ -98,6 +99,7 @@ function newGame(){
         remaining.innerHTML = `${11 - num_guess}`;
         userInput.removeAttribute('disabled');
         startOver.removeChild(p);
+        
         playGame = true;
     })
 }
