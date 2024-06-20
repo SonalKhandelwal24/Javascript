@@ -12,12 +12,20 @@ console.log(randomColor());
 //16 is the position of the random number
 
 let intervalId;
-const startBgColor = function () {
+//method 1 ---
+// const startBgColor = function () {
+//     intervalId = setInterval(function(){
+//         document.body.style.backgroundColor = randomColor();
+//     }, 1000);
+// }
+// document.querySelector('#start').addEventListener('click', startBgColor);
+
+//method 2 ---
+document.querySelector('#start').addEventListener('click', function () {
     intervalId = setInterval(function(){
         document.body.style.backgroundColor = randomColor();
     }, 1000);
-}
-document.querySelector('#start').addEventListener('click', startBgColor)
+})
 
 const stopBgColor = function () {
     clearInterval(intervalId);
