@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,8 @@
             margin: 10px 10px 10px 0px;
             padding: 10px 20px;
             border-radius: 5px;
+            font-size: larger;
+            font-weight: bold;
         }
 
         #demo {
@@ -25,8 +28,31 @@
 
 <body>
     <h1>Start button should change the Background color every second:</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
+    <button id="start" onclick="startBgColor()">Start</button>
+    <button id="stop" onclick="stopBgColor()">Stop</button>
 </body>
 <script src="ColorChanger.js"></script>
+
+<!-- <script>
+    const randomColor = function () {
+        let hex = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    };
+    console.log(randomColor());
+
+    let intervalId; 
+    function startBgColor() {
+        intervalId = setInterval(() => {
+            document.body.style.backgroundColor = randomColor();
+        }, 1000);
+    }
+    function stopBgColor() {
+        clearInterval(intervalId);
+    }
+</script> -->
+
 </html>
